@@ -333,3 +333,72 @@ a.permalink {
 		}
 	}
 }
+
+.composer {
+	background-color: @bg-lighter !important;
+	.title.form-control {
+		background-color: @bg-textarea;
+	}
+	.preview.well, .write, .form-control {
+		background-color: @bg-textarea !important;
+	}
+	.write {
+		border: 0px !important;
+		&:focus {
+			border-top: 1px solid @bg-lightest !important;
+			border-bottom: 1px solid @bg-lightest !important;
+			outline: 1px solid @bg-lightest !important;
+		}
+	}
+	.preview.well {
+		border: 0px !important;
+	}
+	.formatting-group li {
+		color: @primary-text !important;
+		&:hover {
+			background-color: @bg-darker !important;
+			color: @brighter-text !important;
+		}
+	}
+	.category-dropdown-menu {
+		li a {
+			color: @faded-text !important;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+	.category-list-container  .form-control, .title.form-control {
+		color: @faded-text;
+		font-weight: 500;
+	}
+	.bootstrap-tagsinput {
+		background-color: @bg-textarea;
+		color: @faded-text;
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+}
+
+.btn-default {
+	background-color: @button-color;
+	border-color: @button-color;
+	color: @brighter-text;
+	text-transform: uppercase;
+	font-weight: 500;
+	&:hover {
+		background-color: @bg-lightest;
+		border-color: @bg-lightest;
+		color: @faded-text;
+
+	}
+	span {
+		color: @brighter-text;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+
+.btn {
+	text-transform: uppercase;
+	font-weight: 500;
+}
