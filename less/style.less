@@ -402,3 +402,37 @@ a.permalink {
 	text-transform: uppercase;
 	font-weight: 500;
 }
+
+.account .dropdown-menu, .topic-list-header .dropdown-menu, .topic .dropdown-menu {
+	.divider {
+		background-color: @bg-lighter;
+	}
+	li {
+		a {
+			color: @faded-text;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+}
+.account {
+	.account-picture-block {
+		ul.list-group a {
+			background-color: @bg-darker;
+			background-color: #2F3136;
+			border: 1px solid @bg-lighter;
+			color: white;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+	.form-horizontal {
+		.controls {
+			input, textarea, select{
+				background-color: @bg-textarea;
+				border: 0px;
+				color: @brighter-text;
+			}
+		}
+	}
+}
