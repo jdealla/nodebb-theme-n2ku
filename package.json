@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
-  "version": "10.3.19",
+  "name": "nodebb-theme-n2ku",
+  "version": "1.0.0",
   "nbbpm": {
     "compatibility": "^1.16.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "New 2KU theme for NodeBB",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/jdealla/nodebb-theme-n2ku"
   },
   "keywords": [
     "nodebb",
@@ -19,24 +19,14 @@
   ],
   "contributors": [
     {
-      "name": "Andrew Rodrigues",
-      "email": "andrew@designcreateplay.com",
+      "name": "jdealla",
+      "email": "jdealla2k@gmail.com",
       "url": "https://github.com/psychobunny"
-    },
-    {
-      "name": "Julian Lam",
-      "email": "julian@designcreateplay.com",
-      "url": "https://github.com/julianlam"
-    },
-    {
-      "name": "Barış Soner Uşaklı",
-      "email": "baris@designcreateplay.com",
-      "url": "https://github.com/barisusakli"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/jdealla/nodebb-theme-n2ku"
   },
   "dependencies": {
     "pulling": "^2.0.0",

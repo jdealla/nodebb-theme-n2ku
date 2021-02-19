@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-persona",
-    "name": "Persona",
-    "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona",
+    "id": "nodebb-theme-n2ku",
+    "name": "New 2KU",
+    "description": "New 2KU is the default theme for 2KUniverse.com, based on nodebb-theme-persona 10.3.19.",
+    "url": "https://github.com/jdealla/nodebb-theme-n2ku",
     "screenshot": "screenshot.png"
 }

@@ -1,11 +1,7 @@
-Persona theme for NodeBB
+New 2KU theme for NodeBB
 ====================
 
-Persona is the new default theme for NodeBB as of v0.7.1
-
-## Addons
-
-[Recent Cards](https://github.com/psychobunny/nodebb-plugin-recent-cards)
+New 2KU is the default theme for 2KUniverse.com, based on nodebb-theme-persona 10.3.19
 
 ## Screenshots
 
