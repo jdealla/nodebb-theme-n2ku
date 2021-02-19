@@ -4,19 +4,41 @@
 
 	> li {
 
-		padding-bottom: 10px;
+		// padding-bottom: 10px;
 
 		@media (max-width: @screen-xs-max) {
-			border-top: 1px solid @gray-lighter;
+			border-top: 2px solid @bg-darker;
 			&:last-child {
-				border-bottom: 1px solid @gray-lighter;
+				border-bottom: 2px solid @bg-darker;
 			};
+			.avatar {
+				height: 40px !important;
+				width: 40px !important;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.content, .no-padding {
+				padding-left: 0px !important;
+				padding-right: 0px !important;
+				line-height: 1;
+			}
+			.mobile-teaser {
+				color: @faded-text;
+				text-decoration: none !important;
+				font-size: 12px;
+    			text-transform: uppercase;
+    			font-weight: 500;	
+
+			}
 		}
 
 		min-height: 53px;
 
 		.content {
+			display: flex;
 			padding: 10px 15px;
+			flex-wrap: wrap;
 
 			.icon {
 				font-size: 17px;
@@ -40,7 +62,8 @@
 				font-size: 18px;
 				line-height: 22px;
 				margin: 0;
-				margin-left: 62px;
+				flex-basis: 100%;
+				// margin-left: 62px;
 
 				strong {
 					color: @gray-dark;
@@ -56,9 +79,12 @@
 		}
 
 		.mobile-stat {
+			text-align: center;
 			padding-left: 0px;
 			padding-top: 10px;
 			font-size: 16px;
+			color: @light-purple;
+			font-weight: 700;
 		}
 
 		.card {
@@ -69,6 +95,14 @@
 			height: 53px;
 			font-size: 12px;
 			line-height: 14px;
+
+			.permalink {
+				color: @faded-text;
+				font-weight: 700;
+				font-size: 10px;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
 
 			> * {
 				padding-left: 20px;
@@ -104,6 +138,7 @@
 		.category-children {
 			.category-children-item {
 				margin-right: 10px;
+				margin-bottom: 1px;
 			}
 			.icon {
 				min-width: 23px;
@@ -225,10 +260,15 @@
 	margin-top: 10px;
 	line-height: 22px;
 
+	.human-readable-number {
+		color: @light-purple;
+		font-weight: 700;
+	}
+
 	small {
 		text-transform: uppercase;
-		color: @gray-light;
-		font-weight: 300;
+		color: @faded-text;
+		font-weight: 500;
 		font-size: 12px;
 	}
 }

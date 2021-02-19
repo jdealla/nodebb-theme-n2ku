@@ -1,50 +1,32 @@
 <div class="clearfix post-header">
-	<div class="icon pull-left">
-		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+
+<div class="post-top">
+	<div class="user-avatar">
+		<a class="avatar-image" href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{buildAvatar(posts.user, "sm2x", true, "", "user/picture")}
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 		</a>
+		<a class="username" href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
 	</div>
-
-	<small class="pull-left">
-		<strong>
-			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
-		</strong>
-
-		<!-- IMPORT partials/topic/badge.tpl -->
-
-		<!-- IF posts.user.banned -->
-		<span class="label label-danger">[[user:banned]]</span>
-		<!-- ENDIF posts.user.banned -->
-
-		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			<!-- IF posts.toPid -->
-			<a component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
-			<!-- ENDIF posts.toPid -->
-
-			<span>
-				<!-- IF posts.user.custom_profile_info.length -->
-				&#124;
-				{{{each posts.user.custom_profile_info}}}
-				{posts.user.custom_profile_info.content}
-				{{{end}}}
-				<!-- ENDIF posts.user.custom_profile_info.length -->
-			</span>
-		</span>
-
-	</small>
-	<small class="pull-right">
-		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
-	</small>
-	<small class="pull-right">
+	<div class="hidden-xs hidden-sm badges">
+	<!-- IMPORT partials/topic/badge.tpl -->
+	</div>
+	<div class="date-edit">
 		<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
-		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
+    	<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
 
 		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 		</span>
-	</small>
+	</div>
+</div>
+
+<div class="hidden-md hidden-lg badges">
+	<!-- IMPORT partials/topic/badge.tpl -->
+</div>
+
+
 </div>
 
 <br />

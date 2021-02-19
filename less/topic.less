@@ -3,6 +3,10 @@
 		margin-top: 0px;
 	}
 
+	.plugin-mentions-a {
+		font-weight: 700;
+	}
+
 	h1 {
 		line-height: 40px;
 		margin-bottom: 0px;
@@ -59,6 +63,14 @@
 		}
 	}
 	.category-item {
+		a {
+			color: @faded-text;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 13px;
+		}
+
+
 		.icon {
 			min-width: 23px;
     		min-height: 23px;
@@ -71,6 +83,10 @@
 	}
 
 	.posts {
+		> li {
+			border-bottom: 1px solid @bg-darker !important;
+		}
+	
 		h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
 			margin-top: 0px;
 		}
@@ -103,6 +119,19 @@
 			margin-top: 15px
 		}
 
+		p {
+			font-size: 16px;
+		}
+
+		.timeago {
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+		a.permalink {
+			text-decoration: none !important;
+		}
+
 		.icon {
 			position: relative;
 			border-radius: 50%;
@@ -116,6 +145,7 @@
 				right: 12px;
 				font-size: 12px;
 				top: 0px;
+				z-index: 1;
 
 				@media (min-width: @screen-md-min) {
 					top: 2px;
@@ -153,9 +183,10 @@
 	}
 
 	[component="post/upvote"], [component="post/downvote"] {
-		color: @gray-light;
+		color: @faded-text;
 		display: inline-block;
 		padding: 1rem;
+		font-size: 14px;
 
 		&:first-child {
 			padding-right: 0.5rem;
@@ -170,13 +201,18 @@
 		}
 	}
 
-	[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
+	[component="post/upvote"].upvoted {
 		color: @brand-primary;
+	}
+
+	[component="post/downvote"].downvoted {
+		color: @brand-warning;
 	}
 
 	[component="post/vote-count"] {
 		display: inline-block;
 		padding: 1rem 0.5rem;
+		cursor: pointer;
 	}
 
 	[component="post/parent"] {
@@ -190,6 +226,9 @@
 		margin-top: 10px;
 		text-decoration: none;
 		font-size: 11px;
+		color: @faded-text;
+		text-transform: uppercase;
+		font-weight: 700;
 
 		img, .user-icon {
 			.user-icon-style(16px, 10px, 50%);
@@ -270,8 +309,7 @@
 	.content {
 		margin-top: @post-padding;
 		padding-bottom: 1px;
-		margin-top: -43px;
-		margin-left: 61px;
+		margin-left: 38px;
 		word-wrap: break-word;
 		overflow: hidden;
 		min-height: 60px;
@@ -279,6 +317,9 @@
 
 	.post-tools {
 		a {
+			color: @faded-text;
+			font-weight: 700;
+			text-transform: uppercase;
 			padding: 1rem 10px;
 			.pointer;
 		}
@@ -411,6 +452,12 @@
 
 
 .topic {
+	
+	.post-top {
+		align-items: center;
+		display: flex;
+	}
+
 	&.deleted {
 		.opacity(0.3);
 
@@ -422,16 +469,9 @@
 	.posts {
 		list-style-type: none;
 		padding: 0;
-		[component="post"][data-index="0"] {
-			border-bottom: 5px solid @post-border-color;
-		}
+
 		[component="post"] {
 			position: relative;
-			border-bottom: 1px solid @post-border-color;
-
-			padding-bottom: @post-padding;
-			margin-bottom: @post-padding;
-
 			.transition(0.75s ease-in-out border-color);
 
 			.edit-icon {
@@ -513,7 +553,7 @@
 
 	.pagination-block {
 		position: fixed;
-		background-color: @gray-lighter;
+		background-color: @bg-darkest;
 		bottom: 0px;
 		right: 0px;
 		z-index: 100;
@@ -657,12 +697,6 @@
 }
 
 [component="post"] {
-	&.topic-owner-post>.post-header .avatar {
-		-webkit-box-shadow: 0px 0px 4px 3px @brand-primary;
-		-moz-box-shadow: 0px 0px 4px 3px @brand-primary;
-		box-shadow: 0px 0px 4px 3px @brand-primary;
-	}
-
 	.avatar.avatar-sm2x {
 		font-size: 2.875rem;
 	}
@@ -697,3 +731,90 @@
 		}
 	}
 }
+
+.votes span {
+	color: @purple;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+@media (max-width: @screen-sm-max) {
+	.posts {
+		.clearfix.post-header {
+			margin-left: 0px !important;
+		}
+	}
+	.votes span {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+}
+
+.post-top {
+	.user-avatar {
+		a.avatar-image {
+			position: relative;
+			i {
+				position: absolute;
+				right: 5px;
+				z-index: 1;
+			}
+		}
+		a.username {
+			font-weight: 500;
+			margin-left: 5px;
+		}
+	}
+	.date-edit {
+		a.permalink {
+			color: @faded-text;
+			span.timeago {
+				font-size: 11px;
+			}
+		}
+	}
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+	> a {
+		margin-top: 2px;
+		margin-right: 3px;
+	}
+}
+
+@media (max-width: @screen-sm-max) {
+	.post-top {
+		justify-content: space-between;
+	}
+
+	.badges {
+		margin-top: 5px;
+		margin-left: 0px !important;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.date-edit {
+		margin-left: auto;
+	}
+	.post-top {
+		justify-content: flex-start;
+	}
+	.badges {
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	.topic {
+		.content {
+			margin-top: 0px !important;
+		}
+	}
+}
+
+
+
