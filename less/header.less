@@ -35,7 +35,7 @@
 			}
 
 			&.unread {
-				.bg-variant(@state-warning-bg);
+				.bg-variant(@bg-lightest);
 
 				.mark-read:after {
 					content: "\f111";
@@ -58,7 +58,7 @@
 				}
 
 				&:hover {
-					color: @gray-dark;
+					color: @light-purple;
 					.pointer;
 
 					&:after {
@@ -86,11 +86,11 @@
 			}
 
 			&:hover {
-				background: @gray-lighter;
+				background: @bg-darkest;
 			}
 
 			&:not(:last-child) {
-				border-bottom: 1px solid @gray-lighter;
+				border-bottom: 1px solid @bg-lighter;
 			}
 
 			&.no_active a {
@@ -186,14 +186,14 @@
 
 	.notif-dropdown-link {
 		// margin-top: 1em;
-		border-top: 1px solid rgba(163, 163, 163, 0.5);
-		padding: 0 5px 0 5px;
+		border-top: 1px solid @bg-lighter;
 
 		a {
 			display: block;
 			text-align: center;
 			padding: 0.5em 0;
 			font-weight: 600;
+			color: @primary-text !important;
 		}
 	}
 
