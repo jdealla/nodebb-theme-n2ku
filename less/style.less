@@ -301,6 +301,14 @@ a.permalink {
 
 // Added
 
+.breadcrumb {
+	span {
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 13px;
+	}
+}
+
 .topic-header, .topic-list-header.btn-toolbar {
     transition: top .25s;
 }
@@ -437,8 +445,6 @@ a.permalink {
 	}
 }
 
-
-
 .topic-list-header {
 	display: flex;
 	justify-content: space-between;
@@ -472,6 +478,11 @@ a.permalink {
 	}
 	#new_topic, #guest-new-post {
 		order: -9;
+	}
+	.unread {
+		#new_topic {
+			margin-bottom: 10px;
+		}
 	}
 	.new-topic-alert {
 		order: -10;
