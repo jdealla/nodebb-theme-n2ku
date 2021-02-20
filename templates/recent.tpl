@@ -6,34 +6,33 @@
 </div>
 <div class="recent">
 	<div class="topic-list-header btn-toolbar">
-		<div class="pull-left">
-			<!-- IF canPost -->
-			<!-- IMPORT partials/buttons/newTopic.tpl -->
-			<!-- ELSE -->
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-			<!-- ENDIF canPost -->
-			<a href="{config.relative_path}/{selectedFilter.url}" class="inline-block">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
-			</a>
-		</div>
 
-		<div class="btn-group pull-right">
-		<!-- IMPORT partials/category/tools.tpl -->
-		</div>
+		<a href="{config.relative_path}/{selectedFilter.url}" class="new-topic-alert inline-block">
+			<div class="alert alert-warning hide" id="new-topics-alert"></div>
+		</a>	
+		<!-- IF canPost -->
+		<!-- IMPORT partials/buttons/newTopic.tpl -->
+		<!-- ELSE -->
+		<a component="category/post/guest" id="guest-new-post" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+		<!-- ENDIF canPost -->
 
-		<!-- IMPORT partials/category-filter.tpl -->
+		<div class="topic-tools">
+			<!-- IMPORT partials/category/tools.tpl -->
 
-		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				{{{each filters}}}
-				<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
-					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
-				</li>
-				{{{end}}}
-			</ul>
+			<!-- IMPORT partials/category-filter.tpl -->
+
+			<div class="btn-group bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					{{{each filters}}}
+					<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
+						<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
+					</li>
+					{{{end}}}
+				</ul>
+			</div>
 		</div>
 	</div>
 

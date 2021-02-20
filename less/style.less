@@ -436,3 +436,62 @@ a.permalink {
 		}
 	}
 }
+
+
+
+.topic-list-header {
+	display: flex;
+	justify-content: space-between;
+	.topic-tools {
+		order: 10;
+		& > div {
+			margin-left: 4px;
+		}
+	}
+	.new-topic-alert {
+		.alert-warning {
+			background-color: #452656;
+			border: 0px;
+			color: #ffffff;
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: @screen-sm-max) {
+	#mobile-chats {
+		margin-right: 10px;
+	};
+
+	.topic-list-header {
+		flex-wrap: wrap;
+	}
+	.topic-tools {
+		margin-right: 1%;
+	}
+	#new_topic, #guest-new-post {
+		order: -9;
+	}
+	.new-topic-alert {
+		order: -10;
+		width: 100%;
+		display: flex !important;
+		justify-content: center;
+		margin-top: -15px;
+		#new-topics-alert {
+			margin-bottom: 15px;
+    		padding: 10px 16px;
+    		width: 98%;
+    		// margin-left: 2px;
+			text-align: center;
+		}
+
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	#new_topic, #guest-new-post {
+		order: -10;
+	}
+}
