@@ -3,25 +3,47 @@
 					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
 					<i class="fa fa-lg fa-fw fa-bars"></i>
 				</button>
-				<button type="button" class="navbar-toggle hidden" id="mobile-chats">
-					<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
-					<i class="fa fa-lg fa-comment-o"></i>
-				</button>
-
-				<!-- IF brand:logo -->
-				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}?{config.cache-buster}" />
-				</a>
-				<!-- ENDIF brand:logo -->
-				<!-- IF config.showSiteTitle -->
-				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
-					<h1 class="navbar-brand forum-title">{config.siteTitle}</h1>
-				</a>
-				<!-- ENDIF config.showSiteTitle -->
-
-				<div component="navbar/title" class="visible-xs hidden">
-					<span></span>
+				<div class="mobile-nav-flex">
+					<div class="mobile-nav-left">
+						<!-- IF brand:logo -->
+						<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
+							<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}?{config.cache-buster}" />
+						</a>
+						<!-- ENDIF brand:logo -->
+						<!-- IF config.showSiteTitle -->
+						<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
+							<h1 class="navbar-brand forum-title">{config.siteTitle}</h1>
+						</a>
+						<!-- ENDIF config.showSiteTitle -->
+						<div component="navbar/title" class="visible-xs hidden">
+							<span></span>
+						</div>
+					</div>
+					<div class="mobile-nav-right">
+						<div class="notifications dropdown text-center hidden-sm hidden-md hidden-lg" component="notifications">
+							<a href="{relative_path}/notifications" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
+								<i component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
+								<li>
+									<ul component="notifications/list" class="notification-list">
+										<li class="loading-text">
+											<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
+										</li>
+									</ul>
+								</li>
+								<li class="notif-dropdown-link"><a href="#" class="mark-all-read">[[notifications:mark_all_read]]</a></li>
+								<li class="notif-dropdown-link"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></li>
+							</ul>
+						</div>
+						<button type="button" class="navbar-toggle hidden" id="mobile-chats">
+							<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
+							<i class="fa fa-lg fa-comment-o"></i>
+						</button>
+					</div>
 				</div>
+
+
 			</div>
 
 			<div id="nav-dropdown" class="hidden-xs">

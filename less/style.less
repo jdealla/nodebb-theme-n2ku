@@ -301,6 +301,30 @@ a.permalink {
 
 // Added
 
+@media (max-width: @screen-sm-max) {
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		background-color: black;
+	}
+	.mobile-nav-flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.notifications {
+			padding: 15px;
+			.dropdown-menu {
+				position: fixed;
+				right: 0;
+				top: 50px;
+			}
+		}
+		.mobile-nav-right {
+			display: flex;
+			align-items: center;
+			order: 2;
+		}
+	}
+}
+
 .breadcrumb {
 	span {
 		text-transform: uppercase;
