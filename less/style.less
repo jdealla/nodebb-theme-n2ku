@@ -337,6 +337,13 @@ a.permalink {
     transition: top .25s;
 }
 
+.topic {
+	.tag-list span {
+		background-color: @dark-purple;
+		color: @brighter-text;
+	}
+}
+
 .notifications, .chats {
 	.dropdown-menu {
 		padding-bottom: 0px !important;
@@ -528,5 +535,51 @@ a.permalink {
 @media (min-width: @screen-md-min) {
 	#new_topic, #guest-new-post {
 		order: -10;
+	}
+}
+
+.category-dropdown-menu {
+	li a {
+		color: @faded-text !important;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+}
+
+.account {
+	select, input {
+		color: @brighter-text;
+		background-color: @bg-textarea;
+	}
+	.well {
+		background-color: @bg-lighter;
+		border: 0;
+	}
+}
+
+.search {
+	.panel {
+		.panel-heading {
+			border: 0;
+			background-color: #000;
+			color: @brighter-text;
+		}
+		border: 0;
+		background-color: @bg-darkest;
+	}
+	.alert-info {
+		background-color: @dark-purple;
+		color: @brighter-text;
+		border: 0;
+		font-size: 17px;
+	}
+	input, select {
+		background-color: @bg-textarea;
+		border: 0;
+		color: @brighter-text;
+	}
+	.topic-row {
+		background-color: @bg-bright;
+		border: 0;
 	}
 }
