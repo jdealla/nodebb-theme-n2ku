@@ -23,6 +23,7 @@
 //== 2KU Colors
 // ## Background
 
+@bg-bright: #5d636f;
 @bg-lightest: #4a4e56;
 @bg-textarea: #40444B;
 @bg-lighter: #36393F;
@@ -477,20 +478,20 @@
 //##
 
 @pagination-color:                     @link-color;
-@pagination-bg:                        #fff;
-@pagination-border:                    #ddd;
+@pagination-bg:                        @bg-textarea;
+@pagination-border:                    @bg-bright;
 
 @pagination-hover-color:               @link-hover-color;
-@pagination-hover-bg:                  @gray-lighter;
-@pagination-hover-border:              #ddd;
+@pagination-hover-bg:                  @bg-darker;
+@pagination-hover-border:              @bg-bright;
 
 @pagination-active-color:              #fff;
 @pagination-active-bg:                 @brand-primary;
-@pagination-active-border:             @brand-primary;
+@pagination-active-border:             @bright-purple;
 
-@pagination-disabled-color:            @gray-light;
-@pagination-disabled-bg:               #fff;
-@pagination-disabled-border:           #ddd;
+@pagination-disabled-color:            @faded-text;
+@pagination-disabled-bg:               @bg-bright;
+@pagination-disabled-border:           @bg-bright;
 
 
 //== Pager
