@@ -38,9 +38,8 @@
 				{{{ if !feeds:disableRSS }}}
 				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				{{{ end }}}
-				<!-- IMPORT partials/topic/browsing-users.tpl -->
-
 				<!-- IMPORT partials/post_bar.tpl -->
+				<!-- IMPORT partials/topic/browsing-users.tpl -->
 			</div>
 		</div>
 		<!-- IF merger -->

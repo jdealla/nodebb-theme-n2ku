@@ -583,3 +583,21 @@ a.permalink {
 		border: 0;
 	}
 }
+
+.browsing-users-container {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+    width: 100%;
+	.page-topic [component="topic/browsing-users"] [data-uid] a::after {
+		content: "\f141" i !important;
+	}
+	.browsing-user-container {
+		align-self: flex-start;
+		margin-bottom: 11px;
+		margin-left: 2px;
+		&:first-child, &:last-child {
+			margin-bottom: 11px;
+		}	
+	}
+}

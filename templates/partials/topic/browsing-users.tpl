@@ -1,6 +1,6 @@
-<div component="topic/browsing-users" class="inline-block hidden-xs">
+<div component="topic/browsing-users" class="browsing-users-container">
 	{{{each browsingUsers}}}
-	<div class="pull-left" data-uid="{browsingUsers.uid}">
+	<div class="browsing-user-container" data-uid="{browsingUsers.uid}">
 		<a href="<!-- IF browsingUsers.userslug -->{config.relative_path}/user/{browsingUsers.userslug}<!-- ELSE -->#<!-- ENDIF browsingUsers.userslug -->">
 			<!-- IF browsingUsers.picture -->
 			<img class="avatar avatar-sm avatar-rounded" component="user/picture" src="{browsingUsers.picture}" align="left" itemprop="image" title="{browsingUsers.username}"/>
