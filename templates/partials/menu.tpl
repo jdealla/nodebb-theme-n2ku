@@ -22,7 +22,7 @@
 					<div class="hidden-md hidden-lg hidden-sm nav-flex-container">
 					<!-- IF user.mtCount -->
 					<span class="nav-mt-count" data-mt-uid="{user.uid}">{formatMt(user.mtCount)}</span>
-					<img class="mobile-mt-icon" src="https://2kuniverse.com/assets/uploads/2kumt.png" style="max-height: 19px; max-width: 19px" />
+					<img class="mobile-mt-icon mt-icon" src="https://2kuniverse.com/assets/uploads/2kumt.png" />
 					<!-- ENDIF user.mtCount -->
 				</div>
 					<div class="mobile-nav-right">
@@ -52,7 +52,7 @@
 
 			</div>
 
-			<div id="nav-dropdown" class="hidden-xs">
+			<div id="nav-dropdown" class="hidden-xs desktop-nav-flex">
 				<!-- IF !maintenanceHeader -->
 				
 				<div class="nav-flex-container">
@@ -78,7 +78,7 @@
 				<div class="nav-flex-container">
 					<!-- IF user.mtCount -->
 					<span class="nav-mt-count" data-mt-uid="{user.uid}">{formatMt(user.mtCount)}</span>
-					<img class="mt-icon" src="https://2kuniverse.com/assets/uploads/2kumt.png" style="max-height: 19px; max-width: 19px" />
+					<img class="mt-icon" src="https://2kuniverse.com/assets/uploads/2kumt.png" />
 					<!-- ENDIF user.mtCount -->
 				</div>
 
