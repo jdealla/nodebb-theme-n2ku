@@ -1,0 +1,104 @@
+.topic .posts .content .img-responsive {
+    max-height: 450px !important;
+    display: block !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-toggle .notification-icon {
+    display: none;
+}
+
+.header .forum-logo {
+    margin-right: 15px;
+}
+
+.quick-search-container .quick-search-results li a {
+    color: #dedede;
+}
+
+.textcomplete-dropdown {
+    li {
+        a {
+            color: #fff;
+        }
+        &.textcomplete-footer {
+            display: none;
+        }
+    }
+}
+
+li[data-username="NBABot"], li[data-username="NBA Bot"] {
+    .content * {
+        border: 0 !important;
+    }
+    thead {
+        background: #0a0a0a;
+        color: #d4d4d4;
+    }
+    .table-striped>tbody>tr:nth-of-type(even) {
+        background: #686d77;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background: #40444b;
+    }
+}
+
+li[data-username="NBABot"], li[data-uid="253"] {
+    .table {
+        width: unset !important;
+    }
+}
+
+
+
+li {
+    .content {
+        thead {
+            background: #0a0a0a;
+            color: #d4d4d4;
+        }
+        .table-striped>tbody>tr:nth-of-type(even) {
+            background: #686d77;
+        }
+        .table-striped>tbody>tr:nth-of-type(odd) {
+            background: #40444b;
+        }
+    }
+}
+
+// *::-webkit-scrollbar {
+//   display: none;
+//   -ms-overflow-style: none;  /* IE and Edge */
+//   scrollbar-width: none;  /* Firefox */
+// }
+
+// just remove visible-xs-inline-block from post.tpl
+@media (max-width: 767px) {
+    div.date-edit > span.visible-xs-inline-block {
+        display: block !important;
+    }
+}
+
+.page-topic [component="topic/browsing-users"] [data-uid] a::after {
+    content: "\f141" !important;
+    padding: 4px .35em;
+}
+
+.category .category-item, .topic .topic-item {
+    margin-left: 0px;
+    margin-right: 0px;
+    .card {
+        margin-top: 0px !important;
+    }
+}
+
+@media (min-width: 768px) { 
+    .category .category-item, .topic .topic-item {
+        border-bottom: 1px solid #2f3136 !important;
+    }
+}
+
+.notifications-list li.unread {
+    background-color: #7d42b5;
+}
