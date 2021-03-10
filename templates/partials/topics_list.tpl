@@ -62,7 +62,9 @@
 		</div>
 
 		<div class="mobile-stat col-xs-2 visible-xs" style="padding-top: 0px;">
-			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
+			<div class="mobile-stat-flex">
+				<span class="human-readable-number"></i>{topics.postcount}</span> 
+			</div>
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
