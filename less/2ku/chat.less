@@ -1,0 +1,105 @@
+li.chat-message[data-break="true"] + li.chat-message[data-break="true"] {
+    // break here
+}
+
+
+.expanded-chat .chat-content li.chat-message[data-break="true"], .chat-modal .chat-content li.chat-message[data-break="true"] {
+    border: 0px !important;
+    margin-top: 10px !important;
+}
+
+.expanded-chat .chat-content li.system-message::before, .chat-modal .chat-content li.system-message::before, .expanded-chat .chat-content li.system-message::after, .chat-modal .chat-content li.system-message::after {
+    display: inline-block;
+    width: 10%;
+    content: '';
+    border-top: 1px solid #585858;
+    position: relative;
+    top: -0.3rem;
+    margin: 0 2rem;
+}
+
+.expanded-chat .chat-content li.chat-message, .chat-modal .chat-content li.chat-message {
+    font-size: 15px;
+}
+
+.expanded-chat .chat-content li.chat-message .chat-timestamp, .chat-modal .chat-content li.chat-message .chat-timestamp {
+    font-size: 11px;
+    font-weight: 500;
+    color: #8e8e8e;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-dialog {
+    border-radius: 3px;
+}
+
+.close {
+    text-shadow: 0 i !important;
+    opacity: 1 !important;
+    color: #d1d1d1;
+}
+
+.close:hover, .close:focus {
+    text-shadow: 0 i !important;
+    opacity: 1 !important;
+    color: #161616;
+}
+
+.chats-full [component="chat/composer"] [component="chat/input"], .chat-modal [component="chat/composer"] [component="chat/input"] {
+    border: none !important;
+}
+
+.chats-list [component="chat/recent/room"]:not(.bg-info) {
+    background-color: @08dp;
+}
+
+.chat-search.dropdown * {
+    border: none !important;
+}
+
+[component="chat/recent/room"].bg-info {
+    color: black;
+}
+
+[component="chat/header"] {
+    background-color: #212121 !important;
+}
+
+.chat-modal {
+    .modal-header {
+        background-color: #212121 !important;
+    }
+}
+
+[component="chat/nav-wrapper"] {
+    box-shadow: none !important;
+    background-color: #1c1c1c;
+}
+
+.menu-section-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+}
+
+[component="chat/input"] {
+    font-size: 13px;;
+}
+
+.chat-modal {
+    * {
+        border: none !important;
+    }
+    .dropdown-menu {
+        color: white !important;
+        text-transform: capitalize !important;
+        font-size: 14px !important;
+        > li, > li a {
+            color: white !important;
+            font-size: 13px !important;
+        }
+    }
+}

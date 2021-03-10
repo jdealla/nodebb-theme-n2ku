@@ -7,7 +7,6 @@
     .topic-list-header {
         @media (max-width: @screen-xs-max) {
             padding-top: 25px !important;
-            border-bottom: 1px solid @bg-darker;
         }
     }
 }
@@ -18,21 +17,4 @@
     top: @navbar-height;
     background-color: @body-bg;
     z-index: @zindex-navbar;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.page-recent .topic-list-header {
-    @media (min-width: @screen-sm-min){
-        border-bottom: 1px solid @bg-darker;
-    }
-    @media (max-width: @screen-xs-max) {
-        width: 106%;
-        margin-left: -3%;
-        display: flex;
-        // padding-left: 20px;
-        border-bottom: none;
-        padding-top: 25px !important;
-    }
 }
